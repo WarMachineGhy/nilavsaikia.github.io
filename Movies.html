@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Movies!
+    </title>
+    <link rel="stylesheet" href="Movies.css">
+    <script>
+      function RanMov()
+      {
+          var images = new Array("Movies/M1.jpg","Movies/M2.jpg","Movies/M3.jpg","Movies/M4.jpg","Movies/M5.jpg","Movies/M6.jpg","Movies/M7.jpg","Movies/M8.jpg","Movies/M9.jpg","Movies/M10.jpg","Movies/M11.jpg","Movies/M12.jpg");
+          var l = images.length;
+          var i,j,flag;
+          var values = new Array(l)
+          for(i=0;i<l;i++)
+          {
+            flag=0;
+            var rand = Math.floor(l*Math.random());
+            for(j=0;j<i;j++)
+            {
+              if(values[j]==rand)
+              {
+                flag++;
+              }
+            }
+            if(flag>0)
+            {
+              i--;
+            }
+            else
+            {
+              values[i]=rand;
+              console.log(values[i]);
+            }
+          }
+          for(i=0;i<l;i++)
+          {
+            document.getElementById("M"+(i+1)).src=images[values[i]];
+          }
+      }
+  </script>
+  </head>
+  <body style="background-color:black;">
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a onclick="RanMov()">Shuffle</a>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="Movies/M1.jpg" id="M1">
+        <img src="Movies/M2.jpg" id="M2">
+        <img src="Movies/M9.jpg" id="M9">
+      </div>
+      <div class="column">
+        <img src="Movies/M3.jpg" id="M3">
+        <img src="Movies/M4.jpg" id="M4">
+        <img src="Movies/M10.jpg" id="M10">
+      </div>
+      <div class="column">
+        <img src="Movies/M5.jpg" id="M5">
+        <img src="Movies/M6.jpg" id="M6">
+        <img src="Movies/M11.jpg" id="M11">
+      </div>
+      <div class="column">
+       <img src="Movies/M7.jpg" id="M7">
+       <img src="Movies/M8.jpg" id="M8">
+       <img src="Movies/M12.jpg" id="M12">
+     </div>
+    </div>
+  </body>
+</html>

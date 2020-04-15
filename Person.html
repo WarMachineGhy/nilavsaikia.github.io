@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Famous Personalities!
+    </title>
+    <link rel="stylesheet" href="Person.css">
+    <script>
+      function RanMov()
+      {
+          var images = new Array("Person/P1.jpg","Person/P2.jpg","Person/P3.jpg","Person/P4.jpg","Person/P5.jpg","Person/P6.jpg","Person/P7.jpg","Person/P8.jpg");
+          var l = images.length;
+          var i,j,flag;
+          var values = new Array(l)
+          for(i=0;i<l;i++)
+          {
+            flag=0;
+            var rand = Math.floor(l*Math.random());
+            for(j=0;j<i;j++)
+            {
+              if(values[j]==rand)
+              {
+                flag++;
+              }
+            }
+            if(flag>0)
+            {
+              i--;
+            }
+            else
+            {
+              values[i]=rand;
+              console.log(values[i]);
+            }
+          }
+          for(i=0;i<l;i++)
+          {
+            document.getElementById("P"+(i+1)).src=images[values[i]];
+          }
+      }
+  </script>
+  </head>
+  <body style="background-color:black;">
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a onclick="RanMov()">Shuffle</a>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="Person/P1.jpg" id="P1">
+        <img src="Person/P2.jpg" id="P2">
+      </div>
+      <div class="column">
+        <img src="Person/P5.jpg" id="P5">
+        <img src="Person/P6.jpg" id="P6">
+      </div>
+      <div class="column">
+        <img src="Person/P3.jpg" id="P3">
+        <img src="Person/P4.jpg" id="P4">
+      </div>
+      <div class="column">
+        <img src="Person/P7.jpg" id="P7">
+        <img src="Person/P8.jpg" id="P8">
+    </div>
+  </body>
+</html>

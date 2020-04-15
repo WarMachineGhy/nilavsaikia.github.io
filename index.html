@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            FWT Assignment
+        </title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+        <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }   
+            function BMI(){
+                var w = prompt("Enter Weight in kg");
+                var h = prompt("Enter Height in m");
+                var b = w/(h*h);
+                if(b<16){
+                    alert("BMI = "+b+"\n"+"Severely Thin");
+                }
+                else if(b>=16 && b<18.5)
+                {
+                    alert("BMI = "+b+"\n"+"Thin");
+                }
+                else if(b>=18.5 && b<25)
+                {
+                    alert("BMI = "+b+"\n"+"Healthy");
+                }
+                else if(b>=25 && b<30)
+                {
+                    alert("BMI = "+b+"\n"+"Overweight");
+                }
+                else if(b>=30)
+                {
+                    alert("BMI = "+b+"\n"+"Obese");
+                }
+            }
+            function Zodiac(){
+                var day = prompt("Enter Date (1-31)");
+                var month = prompt("Enter Month (1-12)");
+                if((month == 1 && day <= 20) || (month == 12 && day >=22)) {
+                    alert("Capricorn");
+                } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
+                    alert("Aquarius");
+                } else if((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+                    alert("Pisces");
+                } else if((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
+                    alert("Aries");
+                } else if((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
+                    alert("Taurus");
+                } else if((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+                    alert("Gemini");
+                } else if((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
+                    alert("Cancer");
+                } else if((month == 7 && day >= 23) || (month == 8 && day <= 23)) {
+                    alert("Leo");
+                } else if((month == 8 && day >= 24) || (month == 9 && day <= 23)) {
+                    alert("Virgo");
+                } else if((month == 9 && day >= 24) || (month == 10 && day <= 23)) {
+                    alert("Libra");
+                } else if((month == 10 && day >= 24) || (month == 11 && day <= 22)) {
+                    alert("Scorpio");
+                } else if((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
+                    alert("Sagittarius");
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color:black;">
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="Movies.html">Movies</a>
+            <a href="Person.html">Famous Personalities</a>
+            <a onclick="openNav()" href="#" class="util">Utilities</a>
+        </div>
+    </body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a href="#" onclick="Zodiac()">Zodiac</a>
+       <a href="#" onclick="BMI()">BMI</a>
+    </div>
+    <h1 class="FWT1" style="color:white">FWT Assignment</h1>
+    <h3 class="FWT2" style="color:white">Hello Viewer :)</h3>
+    <div class="footer">
+      <h5 class="conhead">About Me</h5>
+      <p class="conbody">Nilav Saikia<span class="tab">201800655</span></p>
+      <p class="conbody">E-Mail<span class="tab"><a class="conbody" href="nilav.saikia@gmail.com">nilav.saikia@gmail.com</a></span></p>
+    </div>
+</html>
